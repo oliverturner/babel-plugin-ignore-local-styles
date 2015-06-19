@@ -1,0 +1,24 @@
+{
+  "name": "babel-plugin-ignore-local-styles",
+  "version": "1.0.0",
+  "description": "Babel plugin to ignore locally required (S)CSS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oliverturner/babel-plugin-ignore-local-styles.git"
+  },
+  "keywords": [
+    "babel",
+    "babel-plugin",
+    "postcss"
+  ],
+  "author": "Oliver Turner",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/oliverturner/babel-plugin-ignore-local-styles/issues"
+  },
+  "homepage": "https://github.com/oliverturner/babel-plugin-ignore-local-styles#readme"
+}

@@ -1,0 +1,23 @@
+{
+  "name": "babel-plugin-ignore-local-styles",
+  "version": "1.0",
+  "description": "Babel plugin to ignore locally required (S)CSS",
+  "main": "index.js",
+  "author": {
+    "name": "Oliver Turner"
+  },
+  "license": "MIT",
+  "peerDependencies": {
+    "babel-core": ">=5.2.0"
+  },
+  "keywords": [
+    "babel",
+    "babel-plugin",
+    "styles",
+    "scss",
+    "css"
+  ],
+  "scripts": {},
+  "directories": {},
+  "readme": "ERROR: No README data found!"
+}
