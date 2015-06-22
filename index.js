@@ -5,7 +5,7 @@ module.exports = function (babel) {
 
     ImportDeclaration: function(specifiers, source) {
       var ext = specifiers.source.value.match(/\.s?css$/);
-      if (ext) return;
+      if (!ext) return;
       this.dangerouslyRemove();
     },
 
