@@ -3,18 +3,22 @@ module.exports = function (babel) {
 
   return new babel.Transformer("ignore-local-styles", {
     ImportDeclaration: function(specifiers, source) {
-      // console.log('source:', source);
+      var ext = specifiers.source.value.match(/\.s?css$/);
+      if (ext === -1) return;
+      this.dangerouslyRemove();
     },
 
     CallExpression: function(node, parent) {
-      var isRequire = t.isIdentifier(node.callee, {name: "require"});
+      var isRequire, argument, ext;
+
+      isRequire = t.isIdentifier(node.callee, {name: "require"});
       if (!isRequire) return;
       if (node.arguments.length !== 1) return;
 
-      var argument = node.arguments[0];
-
+      argument = node.arguments[0];
       if (argument.type !== "Literal" || typeof argument.value !== "string") return;
-      var ext = argument.value.split('.').pop();
+
+      ext = argument.value.split('.').pop();
       if (ext === 'scss' || ext === 'css') {
         this.dangerouslyRemove();
       }
