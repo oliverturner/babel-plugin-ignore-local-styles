@@ -2,6 +2,10 @@ module.exports = function (babel) {
   var t = babel.types;
 
   return new babel.Transformer("ignore-local-styles", {
+    ImportDeclaration: function(specifiers, source) {
+      // console.log('source:', source);
+    },
+
     CallExpression: function(node, parent) {
       var isRequire = t.isIdentifier(node.callee, {name: "require"});
       if (!isRequire) return;
