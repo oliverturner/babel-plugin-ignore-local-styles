@@ -2,9 +2,10 @@ module.exports = function (babel) {
   var t = babel.types;
 
   return new babel.Transformer("ignore-local-styles", {
+
     ImportDeclaration: function(specifiers, source) {
       var ext = specifiers.source.value.match(/\.s?css$/);
-      if (ext === -1) return;
+      if (ext) return;
       this.dangerouslyRemove();
     },
 
