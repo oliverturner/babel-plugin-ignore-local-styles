@@ -9,3 +9,7 @@ Used in conjunction with the `env` setting of `.babelrc`, this plugin can be use
 # TODO
 
 Working examples
+
+# WIP
+
+Check against http://bl.ocks.org/brigand/raw/ca1a0eb767346e9e48f8/#/e6BHzCdNLY
